@@ -13,4 +13,10 @@
   <h3>Email: </h3>
   <h3>Likes: </h3>
 
+  <p>{{$tienda->id}}</p><br/>
+  <p>{{$tienda->name}}</p><br/>
+  <p>{{$tienda->description}}</p><br/>
+  <p>{{$tienda->password}}</p><br/>
+  <p>{{$tienda->email}}</p><br/>
+  <p>{{$tienda->likes}}</p><br/>
 @endsection

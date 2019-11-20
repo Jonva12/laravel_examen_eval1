@@ -13,12 +13,12 @@ class CreateTableShops extends Migration
      */
     public function up()
     {
-        Schema::create('table_shops', function (Blueprint $table) {
+        Schema::create('shops', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 20);
             $table->longText('description');
             $table->string('password', 255);
-            $table->string('email', 50);
+            $table->string('email', 50)->unique();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTableShops extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_shops');
+        Schema::dropIfExists('shops');
     }
 }

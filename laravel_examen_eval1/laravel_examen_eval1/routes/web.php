@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('tiendas/create','ShopController@create')->name('tiendas.create');
-Route::post('tiendas/store','ShopController@store')->name('tiendas.store');
-Route::get('productos/index','ProductController@index')->name('productos.index');
+Route::get('tiendas/create','shopController@create')->name('tiendas.create');
+Route::post('tiendas/store','shopController@store')->name('tiendas.store');
+route::get('tiendas/show/{id}', 'shopController@show')->name('tiendas.show');
+Route::get('productos/index','productController@index')->name('productos.index');
